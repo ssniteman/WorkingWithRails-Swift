@@ -21,10 +21,27 @@ class ViewController: UIViewController {
     
     @IBAction func postNew(sender: AnyObject) {
         
-        // adding posts
+        // adding posts - post/get/delete just means this is the type of request we are sending
         
+        let newPostURL = API + "posts?post[title]=\(titleField.text)&post[content]=\(contentField.text)"
         
+        let encodedString = newPostURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         
+        var request = NSMutableURLRequest(URL: NSURL(string: encodedString!))
+        
+        request.setValue("zxcasdqwe", forHTTPHeaderField: "AUTH_TOKEN")
+        
+        // we are sending you information
+        
+        request.HTTPMethod = "POST"
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+            
+            let info:AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil)!
+            
+            println(info)
+            
+        }
     }
     
     
