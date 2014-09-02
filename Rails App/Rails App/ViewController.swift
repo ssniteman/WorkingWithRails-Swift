@@ -21,10 +21,30 @@ class ViewController: UIViewController {
     
     @IBAction func postNew(sender: AnyObject) {
         
+        // adding posts
+        
+        
+        
     }
     
     
     @IBAction func getMyPosts(sender: AnyObject) {
+        
+        let myPostsURL = API + "posts/mine"
+        
+        // use var on a mutuable request
+        
+        var request = NSMutableURLRequest(URL: NSURL(string: myPostsURL))
+        
+        request.setValue("zxcasdqwe", forHTTPHeaderField: "AUTH_TOKEN")
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+            
+            let posts = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as NSArray
+            
+            println(posts)
+            
+        }
         
     }
     
@@ -34,6 +54,8 @@ class ViewController: UIViewController {
         // regular request
         
         let allPostsURL = API + "posts"
+        
+        // use let when you want it to stay constant
         
         let request = NSURLRequest(URL: NSURL(string: allPostsURL))
         
