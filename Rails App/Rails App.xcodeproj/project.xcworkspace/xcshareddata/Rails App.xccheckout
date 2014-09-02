@@ -12,20 +12,24 @@
 	<dict>
 		<key>A720786476AC7A993A13306263C61E28465C17FF</key>
 		<string>https://github.com/ssniteman/iOS-Beginner-Apps.git</string>
+		<key>F03AC3FB026558A35DC19024D99730A8F006A369</key>
+		<string>https://github.com/ssniteman/WorkingWithRails-Swift.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Rails App/Rails App.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>A720786476AC7A993A13306263C61E28465C17FF</key>
+		<string>../../../../iOS_Beginner</string>
+		<key>F03AC3FB026558A35DC19024D99730A8F006A369</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/ssniteman/iOS-Beginner-Apps.git</string>
+	<string>https://github.com/ssniteman/WorkingWithRails-Swift.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>A720786476AC7A993A13306263C61E28465C17FF</string>
+	<string>F03AC3FB026558A35DC19024D99730A8F006A369</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>A720786476AC7A993A13306263C61E28465C17FF</string>
 			<key>IDESourceControlWCCName</key>
 			<string>iOS_Beginner</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F03AC3FB026558A35DC19024D99730A8F006A369</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WorkingWithRails-Swift</string>
 		</dict>
 	</array>
 </dict>

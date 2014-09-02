@@ -35,6 +35,18 @@ class ViewController: UIViewController {
         
         let allPostsURL = API + "posts"
         
+        let request = NSURLRequest(URL: NSURL(string: allPostsURL))
+        
+        // need to make URL connection
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+            
+            let posts = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as NSArray
+            
+            println(posts)
+            
+        }
+        
     }
     
     
